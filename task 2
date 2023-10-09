@@ -1,0 +1,126 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
+#include <string.h>
+
+int main() 
+{
+  char input[128];
+  while(1)
+  {
+    printf("select category\n");
+    printf("1.songs\n");
+    printf("2.movies\n");
+    printf("3.anime\n");
+    int i;
+    gets(input);
+      for ( i = 0; i <= strlen (input); i++)  
+      {
+      if (input[i] >= 65 && input[i] <= 90)  
+      input[i] = input[i] + 32;  
+      }
+    if(strcmp(input,"songs")==0)
+    {
+      printf("\nWhich type of songs would you like to listen?\n");
+      printf("select the genre\n");
+      printf(" 1)Romantic\n");
+      printf(" 2)hiphop\n");
+      printf(" 3)Rap\n");
+      char genre[128];
+      while(1)
+        {
+          gets(genre);
+          if(strcmp(genre,"romantic")==0)
+          {
+            printf("\nThe recommendations are:=\n");
+            printf("1. love me like you do\n");
+            printf("2. closer\n");
+            printf("3. dandelions\n");
+          }
+          else if(strcmp(genre,"hiphop")==0)
+          {
+            printf("\nThe recommendations are:=\n");
+            printf("1. industry baby\n");
+            printf("2. lose yourself\n");
+            printf("3. superhero\n");
+          }
+          else if(strcmp(genre,"rap")==0)
+          {
+            printf("\nThe recommendations are:=\n");
+            printf("1. rap god\n");
+            printf("2. lamborghini\n");
+            printf("3. box\n");
+          }
+        }  
+    }
+    else if(strcmp(input,"movies")==0)
+    {
+      printf("\nWhich type of movies would you like to watch?\n");
+      printf("select the genre\n");
+      printf(" 1)action\n");
+      printf(" 2)thriller\n");
+      printf(" 3)drama\n");
+      char genre[128];
+      while(1)
+        {
+          gets(genre);
+          if(strcmp(genre,"action")==0)
+          {
+            printf("\nThe recommendations are:=\n");
+            printf("1. fast and furious\n");
+            printf("2. john wick\n");
+            printf("3. avengers\n");
+          }
+          else if(strcmp(genre,"thriller")==0)
+          {
+            printf("\nThe recommendations are:=\n");
+            printf("1. inception\n");
+            printf("2. equalizer\n");
+            printf("3. the gray man\n");
+          }
+          else if(strcmp(genre,"drama")==0)
+          {
+            printf("\nThe recommendations are:=\n");
+            printf("1. social networl\n");
+            printf("2.  wolf of wall street \n");
+            printf("3. the pursuit of happiness\n");
+          }
+        }  
+    }
+    else if(strcmp(input,"anime")==0)
+    {
+      printf("\nWhich type of anime would you like to watch?\n");
+      printf("select the genre\n");
+      printf(" 1)sports\n");
+      printf(" 2)action\n");
+      printf(" 3)drama\n");
+      char genre[128];
+      while(1)
+        {
+          gets(genre);
+          if(strcmp(genre,"sports")==0)
+          {
+            printf("\nThe recommendations are:-\n");
+            printf("1. bluelock\n");
+            printf("2. hailkyuu\n");
+            printf("3. kurko's basketball\n");
+          }
+          else if(strcmp(genre,"action")==0)
+          {
+            printf("\nThe recommendations are:=\n");
+            printf("1. one piece\n");
+            printf("2. naruto\n");
+            printf("3. tokyo revengers\n");
+          }
+          else if(strcmp(genre,"drama")==0)
+          {
+            printf("\nThe recommendations are:=\n");
+            printf("1. deathnote\n");
+            printf("2. lookism\n");
+            printf("3. death parade\n");
+          }
+        }  
+    } 
+  }
+  return 0;
+}
