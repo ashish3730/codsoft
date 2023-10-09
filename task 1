@@ -1,0 +1,50 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<ctype.h>
+#include<string.h>
+int main()
+{
+   char input[128];
+   int i=0;
+   printf("\n\n\n\t\t\t\t\t Codebot\n");
+   while(1)
+   {
+      printf("\nHello, I am codbot ,codsoft official bot and i am here to assist you\n");
+      printf("Enter the queries below\n");
+      printf("1. What is codsoft\n2. Services\n3. Types of interships \n4. How to apply job\n5. Other queries\n6. Exit\n");
+      gets(input);
+      int i;
+      for ( i = 0; i <= strlen (input); i++)  
+      {
+      if (input[i] >= 65 && input[i] <= 90)  
+      input[i] = input[i] + 32;  
+      }  
+      if (strcmp(input,"what is codesoft")==0)
+      {
+         printf("CodSoft are IT services and IT consultancy  that specializes in creating innovative solutions for businesses.\n ");
+       }  
+       else if(strcmp(input,"services")==0)
+       {
+          printf("At codsoft you can do internships ,apply for jobs and even buy our products\n");
+       }  
+       else if(strcmp(input,"types of interships")==0) 
+       {
+          printf("At codsoft we offer three types of internships-\n 1. one month internship\n 2. three months internship\n 3. paid internship ");
+       }
+       else if(strcmp(input,"how to apply job")==0)
+       {
+           printf("You can apply job at codsoft by visting our website and selecting job option \n");      
+        }
+       else if(strcmp(input,"other queries")==0)
+       {
+           printf("For other queires and more information visit our website https://www.codsoft.in\n");
+         } 
+       else if(strcmp(input,"exit")==0)
+       {
+          printf("\n");
+          exit(0);
+       }  
+   }
+    getch();
+    return 0;
+}
